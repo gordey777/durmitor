@@ -1,0 +1,22 @@
+name = Goog
+description = Тема разработанная специально для Дурмитор
+
+core       = 7.x
+engine     = phptemplate
+screenshot = screenshot.png
+
+regions[header] = Header Region
+regions[headmenu] = Head Menu
+regions[vertical_menu] = Vertical Menu
+regions[content_under_head] = pervii_ekran_forma_1
+regions[content_top] = vigodi_2
+regions[content_under_top] = fotoblok_3
+regions[content_middle] = otzivi_4
+regions[content_before_bottom] = faq_5
+regions[content_bottom] = zayavka_6
+regions[content] = Main Content
+
+regions[right] = Right
+regions[footer] = Footer
+
+features[] = favicon

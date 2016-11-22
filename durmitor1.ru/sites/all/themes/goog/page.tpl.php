@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <?php print $head ?>
+    <title>
+      <?php print $title ?>
+    </title>
+<!--     <script>
+if (window.XMLHttpRequest) {
+  xhr = new XMLHttpRequest();
+} else {
+  xhr = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xhr.open("GET", 'http://durmitor1.ru/sites/all/themes/goog/styles/styles.css', false);
+xhr.send();
+var lazyStyle = document.createElement('style');
+lazyStyle.innerHTML = xhr.responseText;
+document.head.appendChild(lazyStyle);
+</script> -->
+    <?php print $styles ?>
+    <link href="http://durmitor1.ru/sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
+      <link href="http://durmitor1.ru/sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
+
+      <link href="http://durmitor1.ru/sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
+      <link href="http://durmitor1.ru/sites/all/themes/goog/css/main.css" rel=stylesheet type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+  <header role="banner">
+    <div class="container">
+      <div class="row">
+
+        <?php if ($page['header']) { ?>
+          <?php print render($page['header']); ?>
+        <?php } ?>
+
+        <?php if ($page['headmenu']) { ?>
+
+          <?php print render($page['headmenu']); ?>
+
+          <a href="#mob-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
+            <span>toggle menu</span>
+          </a>
+
+          <nav id="mob-menu-wrap">
+            <?php print render($page['headmenu']); ?>
+          </nav><!-- #mob-menu -->
+
+        <?php } ?>
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </header><!-- /header -->
+
+  <?php if ($page['content_under_head']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+           <?php print render($page['content_under_head']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+  <?php if ($page['content_top']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <?php print render($page['content_top']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+  <?php if ($page['content_under_top']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <?php print render($page['content_under_top']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+  <?php if ($page['content_middle']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+           <?php print render($page['content_middle']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+  <?php if ($page['content_before_bottom']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <?php print render($page['content_before_bottom']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+  <?php if ($page['content_bottom']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <?php print render($page['content_bottom']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+
+  <?php if ($page['content']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <?php print render($page['content']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+  <?php if ($page['headmenu']) { ?>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+                  <?php print render($page['headmenu']); ?>
+
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+  <?php } ?>
+
+</div><!-- /wrapper -->
+
+  <?php if ($page['footer']) { ?>
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12">
+            <?php print render($page['vertical_menu']); ?>
+
+            <?php print render($page['footer']); ?>
+
+          </div>
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </footer><!-- /footer -->
+  <?php } ?>
+
+  <div id=modal0_fon></div>
+  <div id=modal0_content>
+    <div id=x onclick="hide_modal0();"></div>
+    <div class="modal fade" id=myModal tabindex=-1 role=dialog aria-labelledby=myModalLabel aria-hidden=true>
+      <div class=modal-dialog>
+        <div class=modal-content id=modal-content>
+          <div class=modal-header>
+            <button type=button class=close data-dismiss=modal id=but_close aria-hidden=true>&times;</button>
+            <h4 class=modal-title id=myModalLabel>Мы Вам перезвоним</h4>
+          </div>
+          <div class=modal-body>
+            <form role=form name=form_1 onsubmit="return false;">
+              <div class=form-group>
+                <label for=exampleInputEmail7>Имя</label>
+                <div class=input-group> <span class=input-group-addon><span class="glyphicon glyphicon-user"></span></span>
+                  <input class=form-control id=exampleInputEmail7 placeholder="Имя" name=fio>
+                </div>
+              </div>
+              <div class=form-group>
+                <label for=exampleInputEmail8>Телефон</label>
+                <div class=input-group> <span class=input-group-addon><span class="glyphicon glyphicon-earphone"></span></span>
+                  <input class=form-control id=exampleInputEmail8 placeholder="Телефон" name=phone>
+                </div>
+              </div>
+              <p>
+                <button type=submit onclick="send();" id=form_1 class="btn btn-primary">Отправить</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <?php print $scripts ?>
+  <script type="text/javascript" src="sites/all/themes/goog/js/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="sites/all/themes/goog/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="sites/all/themes/goog/js/mod_form.js"></script>
+
+  <script type="text/javascript" src="sites/all/themes/goog/js/jquery.mmenu.all.min.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function($) {
+
+    $('#mob-menu-wrap .content').attr('id', 'mob-menu');
+
+    $("#mob-menu").mmenu({
+      "extensions": [
+        "pagedim-black"
+      ],
+      "offCanvas": {
+        "position": "right"
+      },
+      navbar: {
+        title: 'Дурмитор'
+      },
+      "navbars": [
+
+        {
+          "position": "bottom",
+          "content": [
+
+            "<a class='fa fa-skype' href='skype:'></a>",
+            "<a class='fa fa-vk' href='http://vkontakte.ru'></a>",
+            "<a class='fa fa-instagram' href='https://www.instagram.com/'></a>",
+            "<a class='fa fa-facebook' href='https://www.facebook.com/'></a>"
+          ]
+        }
+      ]
+    });
+
+  });
+  </script>
+
+
+<!--     <script>
+document.getElementById('exampleInputEmail8').onkeypress = document.getElementById('exampleInputEmail2').onkeypress = document.getElementById('exampleInputEmail5').onkeypress = function(e) {
+  e = e || event;
+  if (e.ctrlKey || e.altKey || e.metaKey) return;
+  var chr = getChar(e);
+  if (chr == null) return;
+  if (chr < '0' || chr > '9') {
+    return false;
+  }
+}
+
+function getChar(event) {
+  if (event.which == null) {
+    if (event.keyCode < 32) return null;
+    return String.fromCharCode(event.keyCode)
+  }
+  if (event.which != 0 && event.charCode != 0) {
+    if (event.which < 32) return null;
+    return String.fromCharCode(event.which)
+  }
+  return null;
+}
+</script> -->
+      <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+  (function(d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w.yaCounter36871855 = new Ya.Metrika({
+          id: 36871855,
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+          trackHash: true
+        });
+      } catch (e) {}
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function() {
+        n.parentNode.insertBefore(s, n);
+      };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else {
+      f();
+    }
+  })(document, window, "yandex_metrika_callbacks");
+  </script>
+
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/36871855" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+      <!-- /Yandex.Metrika counter -->
+      <!-- Код тега ремаркетинга Google -->
+      <!--------------------------------------------------
+С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
+------------------------------------------------- -->
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 870985023;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/870985023/?guid=ON&amp;script=0" />
+    </div>
+  </noscript>
+
+</body>
+
+</html>
