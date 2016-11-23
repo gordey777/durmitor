@@ -9,9 +9,9 @@
 @import 'import/buttons';
 @import 'import/forms';
 @import 'import/lists';
-@import 'import/tables';
+//@import 'import/tables';
 @import 'import/mixin';
-@import 'import/wordpress';
+//@import 'import/wordpress';
 
 @import 'grid/bootstrap';
 @import 'grid/bootstrap-theme';
@@ -31,7 +31,7 @@ body {
 
   transition: $base-transition;
 
-  color: $base-font-color;
+  //color: $base-font-color;
   background-color: $base-background-color;
 
   -webkit-font-smoothing: antialiased;
@@ -99,44 +99,18 @@ picture {
 }
 
 header {
-  background-color: $gray-light;
-  .logo {
-    display: block;
-    img {
-      max-width: 100%;
-    }
-  }
+  //background-color: $gray-light;
+
 }
-nav {
-  ul {
-    @extend .justify-child;
-    @extend .clearfix;
-    li {
-      display: inline-block;
-    }
-  }
-  .headnav {
-    font-size: 100%;
-  }
-}
+
 
 section {
   padding: 0 0 $footer;
 }
-article {
-  @extend .clearfix;
-}
-.looper {
-  @extend .clearfix;
-}
 
 
-footer {
-  height: $footer;
-  margin: $footer_margin auto 0;
 
-  background-color: $gray-light;
-}
+
 
 
 

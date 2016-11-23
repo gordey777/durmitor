@@ -12,56 +12,75 @@ if (window.XMLHttpRequest) {
 } else {
   xhr = new ActiveXObject("Microsoft.XMLHTTP");
 }
-xhr.open("GET", 'http://durmitor1.ru/sites/all/themes/goog/styles/styles.css', false);
+xhr.open("GET", 'sites/all/themes/goog/styles/styles.css', false);
 xhr.send();
 var lazyStyle = document.createElement('style');
 lazyStyle.innerHTML = xhr.responseText;
 document.head.appendChild(lazyStyle);
 </script> -->
-    <?php print $styles ?>
-    <link href="http://durmitor1.ru/sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
-      <link href="http://durmitor1.ru/sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
+  <?php print $styles ?>
 
-      <link href="http://durmitor1.ru/sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
-      <link href="http://durmitor1.ru/sites/all/themes/goog/css/main.css" rel=stylesheet type="text/css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
+
+  <link href="sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
+  <link href="sites/all/themes/goog/css/main.css" rel=stylesheet type="text/css">
+  <link href="sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
+  <link href="sites/all/themes/goog/css/skrolr_bg.css" rel=stylesheet type="text/css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <?php print $scripts ?>
+  <script type="text/javascript" src="sites/all/themes/goog/js/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="sites/all/themes/goog/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="sites/all/themes/goog/js/mod_form.js"></script>
 </head>
 
 
 <body>
+
 <!-- wrapper -->
 <div class="wrapper">
   <header role="banner">
+
+<!-- Humburger button -->
+    <a href="#mob-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
+      <span>toggle menu</span>
+    </a>
+
+    <?php if ($page['headmenu']) { ?>
+      <div class="iheadmenu">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <?php print render($page['headmenu']); ?>
+            </div>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    <?php } ?>
+
     <div class="container">
       <div class="row">
 
         <?php if ($page['header']) { ?>
+        <div class="iheader col-md-12">
           <?php print render($page['header']); ?>
+        </div>
         <?php } ?>
 
-        <?php if ($page['headmenu']) { ?>
 
-          <?php print render($page['headmenu']); ?>
-
-          <a href="#mob-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
-            <span>toggle menu</span>
-          </a>
-
-          <nav id="mob-menu-wrap">
-            <?php print render($page['headmenu']); ?>
-          </nav><!-- #mob-menu -->
-
-        <?php } ?>
 
       </div><!-- /.row -->
     </div><!-- /.container -->
   </header><!-- /header -->
 
   <?php if ($page['content_under_head']) { ?>
-    <section>
+
+    <section id="section-1" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 icontent_under_head">
            <?php print render($page['content_under_head']); ?>
           </div>
         </div><!-- /.row -->
@@ -70,10 +89,10 @@ document.head.appendChild(lazyStyle);
   <?php } ?>
 
   <?php if ($page['content_top']) { ?>
-    <section>
+    <section id="section-2" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="icontent_top col-md-12">
             <?php print render($page['content_top']); ?>
           </div>
         </div><!-- /.row -->
@@ -82,10 +101,10 @@ document.head.appendChild(lazyStyle);
   <?php } ?>
 
   <?php if ($page['content_under_top']) { ?>
-    <section>
+    <section id="section-3" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="icontent_under_top col-md-12">
             <?php print render($page['content_under_top']); ?>
           </div>
         </div><!-- /.row -->
@@ -94,10 +113,10 @@ document.head.appendChild(lazyStyle);
   <?php } ?>
 
   <?php if ($page['content_middle']) { ?>
-    <section>
+    <section id="section-3" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="icontent_middle col-md-12">
            <?php print render($page['content_middle']); ?>
           </div>
         </div><!-- /.row -->
@@ -106,10 +125,10 @@ document.head.appendChild(lazyStyle);
   <?php } ?>
 
   <?php if ($page['content_before_bottom']) { ?>
-    <section>
+    <section id="section-4" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="icontent_before_bottom col-md-12">
             <?php print render($page['content_before_bottom']); ?>
           </div>
         </div><!-- /.row -->
@@ -118,10 +137,10 @@ document.head.appendChild(lazyStyle);
   <?php } ?>
 
   <?php if ($page['content_bottom']) { ?>
-    <section>
+    <section id="section-5" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="icontent_bottom col-md-12">
             <?php print render($page['content_bottom']); ?>
           </div>
         </div><!-- /.row -->
@@ -131,10 +150,10 @@ document.head.appendChild(lazyStyle);
 
 
   <?php if ($page['content']) { ?>
-    <section>
+    <section id="section-6" data-type="background" data-speed="10" class="section-bg pages">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="icontent col-md-12">
             <?php print render($page['content']); ?>
           </div>
         </div><!-- /.row -->
@@ -142,27 +161,20 @@ document.head.appendChild(lazyStyle);
     </section><!-- /section -->
   <?php } ?>
 
-  <?php if ($page['headmenu']) { ?>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-                  <?php print render($page['headmenu']); ?>
-
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /section -->
-  <?php } ?>
 
 </div><!-- /wrapper -->
 
   <?php if ($page['footer']) { ?>
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="ifooter">
       <div class="container">
         <div class="row">
+<?php if ($page['headmenu']) { ?>
+          <div class="iheadmenu col-md-12">
 
+                  <?php print render($page['headmenu']); ?>
+
+          </div>
+  <?php } ?>
           <div class="col-md-12">
             <?php print render($page['vertical_menu']); ?>
 
@@ -174,6 +186,14 @@ document.head.appendChild(lazyStyle);
       </div><!-- /.container -->
     </footer><!-- /footer -->
   <?php } ?>
+
+<!-- Mobile Menu -->
+        <?php if ($page['headmenu']) { ?>
+          <nav id="mob-menu-wrap">
+            <?php print render($page['headmenu']); ?>
+          </nav><!-- #mob-menu -->
+
+        <?php } ?>
 
   <div id=modal0_fon></div>
   <div id=modal0_content>
@@ -209,10 +229,7 @@ document.head.appendChild(lazyStyle);
     </div>
   </div>
 
-  <?php print $scripts ?>
-  <script type="text/javascript" src="sites/all/themes/goog/js/jquery-1.9.0.min.js"></script>
-  <script type="text/javascript" src="sites/all/themes/goog/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="sites/all/themes/goog/js/mod_form.js"></script>
+
 
   <script type="text/javascript" src="sites/all/themes/goog/js/jquery.mmenu.all.min.js"></script>
   <script type="text/javascript">
@@ -246,6 +263,23 @@ document.head.appendChild(lazyStyle);
     });
 
   });
+  </script>
+
+  <script type="text/javascript">
+  //BG Paralax Scroll
+    $(document).ready(function(){
+        $('section[data-type="background"]').each(function(){
+            var $bgobj = $(this);
+            $(window).scroll(function() {
+                var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+
+                //var coords = 'center '+ yPos + 'px';
+                var coords = 'center';
+
+                $bgobj.css({ backgroundPosition: coords });
+            });
+        });
+    });
   </script>
 
 
