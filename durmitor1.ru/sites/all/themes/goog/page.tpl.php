@@ -23,9 +23,8 @@ document.head.appendChild(lazyStyle);
 
   <link href="sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
-  <link href="sites/all/themes/goog/css/skrolr_bg.css" rel=stylesheet type="text/css">
-  <link href="sites/all/themes/goog/css/main.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
+  <link href="sites/all/themes/goog/css/skrolr_bg.css" rel=stylesheet type="text/css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

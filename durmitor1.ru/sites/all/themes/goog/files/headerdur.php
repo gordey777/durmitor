@@ -20,19 +20,21 @@
         </a>
       </div>
     </div>
-<div class="col-md-9">
-      <div class="col-md-6 hidden-xs hidden-sm">
-      <div class="header-email">
-        <span>
-          <script>var login='info';var server='durmitor1.ru';var email=login+'@'+server;var url='mailto:'+email;document.write('<a href="'+url+'">'+email+'</a>');</script>
-        </span>
+
+    <div class="col-md-9">
+
+      <div class="col-md-4 hidden-xs hidden-sm">
+        <div class="header-email">
+          <span>
+            <script>var login='info';var server='durmitor1.ru';var email=login+'@'+server;var url='mailto:'+email;document.write('<a href="'+url+'">'+email+'</a>');</script>
+          </span>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-6 col-xs-12">
 
-      <div class="row">
-        <div class="col-sm-6 col-xs-6 col-md-12">
+
+
+        <div class="col-sm-6 col-xs-6 col-md-4">
           <div class="phone-ch">
 
             <span>
@@ -42,7 +44,7 @@
           </div>
         </div>
 
-        <div class="col-sm-6 col-xs-6 col-md-12">
+        <div class="col-sm-6 col-xs-6 col-md-4">
           <div class="phone-moscov">
 
           <span>
@@ -52,8 +54,8 @@
 
         </div>
         </div>
-      </div>
-    </div>
+
+
 
     <div class="col-md-12 hidden-xs hidden-sm">
       <div class="col-md-6">

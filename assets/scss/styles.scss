@@ -1,6 +1,15 @@
+@charset 'UTF-8';
+@import 'grid/bootstrap';
+@import 'grid/bootstrap-theme';
+@import 'menu-humburger';
+@import 'jquery.mmenu.all';
+@import 'import/reset';
+@import 'import/variables';
+@import 'fonts/font_fontawesome';
+@import 'fonts/font_cambria';
 
 
-@font-face {
+/* @font-face {
   font-family: 'open sans';
   font-weight: 400;
   font-style: normal;
@@ -52,7 +61,7 @@
 
   src: url('../fonts/ProductSans.eot');
   src: url('../fonts/ProductSans.eot?#iefix') format('eot'), url('../fonts/ProductSans.woff') format('woff'), url('../fonts/ProductSans.ttf') format('truetype');
-}
+} */
 
 
 //$color-grey: #63666a;
@@ -63,7 +72,15 @@ $color-text: #fff;
 $bg-list: transparent;
 $color-menu: #444;
 //$color-menu: #fff;
-
+//
+.content {
+  img {
+    margin-bottom: 20px;
+  }
+  ul {
+    padding-left: 30px;
+  }
+}
 
 ul.menu {
   a:visited,
@@ -108,8 +125,7 @@ table {
   margin-bottom: 20px;
 
   vertical-align: middle;
-
-  border: 1px solid #ececec;
+  //border: 1px solid #ececec;
   tbody {
     display: inline-block;
 
@@ -386,8 +402,8 @@ td {
 
 
 .telefon .t-forma a {
-  font-family: arial, sans-serif;
-  font-size: 16px;
+  //font-family: arial, sans-serif;
+  font-size: 20px;
   font-weight: bold;
   line-height: .54;
 
@@ -434,6 +450,9 @@ td {
     }
   }
   .brand {
+    a {
+      color: #000;
+    }
     h1 {
       font-size: 35px;
       font-weight: 800;
@@ -465,6 +484,11 @@ td {
   .phone-ch,
   .phone-moscov {
     font-size: 16px;
+    a {
+      font-weight: 700;
+
+      color: #000;
+    }
   }
   ul {
     display: -webkit-flex;
@@ -722,7 +746,7 @@ td {
     &:nth-child(5) {
       width: 180px;
       > .telefon {
-        font-family: arial, sans-serif;
+        //font-family: arial, sans-serif;
         font-size: 13px;
         font-weight: bold;
         line-height: 1.54;
@@ -761,15 +785,15 @@ td {
 
     margin: 0 auto;
     a {
-      font-family: arial, sans-serif;
-      font-size: 22px;
-      font-weight: bold;
+      //font-family: arial, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
       line-height: .54;
 
       display: inline-block;
       //margin: 0 auto;
 
-      padding: 15px;
+      padding: 20px;
 
       text-decoration: none;
 
@@ -987,7 +1011,7 @@ td {
 
   background: none;
   > li {
-    font-family: arial, sans-serif;
+    //font-family: arial, sans-serif;
     font-size: 18px;
     line-height: 25px;
 
@@ -1014,7 +1038,7 @@ td {
       ul {
         padding-left: 20px;
         > li {
-          font-family: arial, sans-serif;
+          //font-family: arial, sans-serif;
           font-size: 18px;
           line-height: 25px;
 
@@ -1112,6 +1136,7 @@ padding: 0; */
 .questions_quest_wrapper {
   box-sizing: border-box;
   width: 100%;
+  max-width: 500px;
   margin: 0 auto 0 auto;
   padding: 0;
   .input-group {
@@ -1132,7 +1157,7 @@ padding: 0; */
   height: auto;
   margin: 20px auto 30px auto;
   .btn.btn-danger.btn-lg.btn-block {
-    font-family: arial, sans-serif;
+    //font-family: arial, sans-serif;
     font-size: 28px;
 
     float: right;
@@ -1148,7 +1173,7 @@ padding: 0; */
   height: auto;
   margin: 20px auto 30px auto;
   .btn.btn-danger.btn-lg.btn-block {
-    font-family: arial, sans-serif;
+    //font-family: arial, sans-serif;
     font-size: 28px;
     //float: right;
     //width: 500px;
@@ -1158,7 +1183,7 @@ padding: 0; */
 }
 
 .input-group .form-control {
-  font-family: arial, sans-serif;
+  //font-family: arial, sans-serif;
   font-size: 18px;
 
   width: 100%;
@@ -1524,7 +1549,7 @@ td > h2 {
   border-radius: 10px;
 }
 
-table,
+//table,
 tr,
 td {
   vertical-align: middle;
@@ -1598,8 +1623,8 @@ div#block-block-15 {
 }
 
 .content table {
-  border: 1px solid #b2b2b2 !important;
-  border-bottom: 1px solid #b2b2b2 !important;
+  //border: 1px solid #b2b2b2 !important;
+  //border-bottom: 1px solid #b2b2b2 !important;
 }
 
 .first {

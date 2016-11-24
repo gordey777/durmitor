@@ -4,7 +4,7 @@ header {
   top: 0;
 
   width: 100%;
-  padding-bottom: 5%;
+  //padding-bottom: 5%;
   //background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.6)), url(../img/head-bg.jpg) center 120% no-repeat fixed;
   //background-size: cover;
 
@@ -58,15 +58,14 @@ header {
   //margin-bottom: 150px;
   /*   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .8);
         box-shadow: 0 0 50px rgba(0, 0, 0, .8); */
-}
-
-section {
   padding-top: 10vh;
   padding-bottom: 10vh;
   .container {
     //background: rgba(0,0,0, .5);
   }
 }
+
+
 
 #block-block-1 {
   .content {
@@ -76,7 +75,8 @@ section {
   }
 }
 
-#header__height{
+#header__height {
   display: block;
+
   width: 100px;
 }
