@@ -1,36 +1,49 @@
 header {
-  padding-bottom: 5%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
 
-  background: url(../img/head-bg.jpg) center 120% no-repeat fixed;
-  background-size: cover;
+  width: 100%;
+  padding-bottom: 5%;
+  //background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.6)), url(../img/head-bg.jpg) center 120% no-repeat fixed;
+  //background-size: cover;
+
+  background: #fff;
+}
+#section-button {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+  background: #fff;
 }
 #section-1 {
-  background: url(../img/1-bg.jpg) center 0 no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.8)), url(../img/1-bg.jpg) center 0 no-repeat fixed;
   background-size: cover;
 }
 
 #section-2 {
-  background: url(../img/2-bg.jpg) center 0 no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.8)), url(../img/2-bg.jpg) center 0 no-repeat fixed;
   background-size: cover;
 }
 
 #section-3 {
-  background: url(../img/3-bg.jpg) center 0 no-repeat fixed;
-  background-size: cover;
+  //background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.8)), url(../img/3-bg.jpg) center 0 no-repeat fixed;
+  //background-size: cover;
+  background: #fff;
 }
 
 #section-4 {
-  background: url(../img/4-bg.jpg) center 0 no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.8)), url(../img/4-bg.jpg) center 0 no-repeat fixed;
   background-size: cover;
 }
 
 #section-5 {
-  background: url(../img/5-bg.jpg) center 0 no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.8)), url(../img/5-bg.jpg) center 0 no-repeat fixed;
   background-size: cover;
 }
 
 #section-6 {
-  background: url(../img/6-bg.jpg) center 0 no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.8)), url(../img/6-bg.jpg) center 0 no-repeat fixed;
   background-size: cover;
 }
 
@@ -42,16 +55,16 @@ header {
   height: auto;
   //min-height: 1000px;
   margin: 0 auto;
-  margin-bottom: 150px;
+  //margin-bottom: 150px;
   /*   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .8);
         box-shadow: 0 0 50px rgba(0, 0, 0, .8); */
 }
 
 section {
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   .container {
-    background: rgba(0,0,0, .5);
+    //background: rgba(0,0,0, .5);
   }
 }
 
@@ -61,4 +74,9 @@ section {
       display: none;
     }
   }
+}
+
+#header__height{
+  display: block;
+  width: 100px;
 }

@@ -264,3 +264,8 @@ $humb-bg-color: rgba(255,150,80, 1);
     }
   }
 }
+@media (min-width: 992px) {
+  #hamburger {
+    display: none;
+  }
+}

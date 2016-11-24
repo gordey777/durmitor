@@ -22,11 +22,10 @@ document.head.appendChild(lazyStyle);
 
 
   <link href="sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
-
   <link href="sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
+  <link href="sites/all/themes/goog/css/skrolr_bg.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/css/main.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
-  <link href="sites/all/themes/goog/css/skrolr_bg.css" rel=stylesheet type="text/css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,9 +38,11 @@ document.head.appendChild(lazyStyle);
 
 <body>
 
+
+
 <!-- wrapper -->
 <div class="wrapper">
-  <header role="banner">
+  <header id="header" role="banner">
 
 <!-- Humburger button -->
     <a href="#mob-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
@@ -50,30 +51,19 @@ document.head.appendChild(lazyStyle);
 
     <?php if ($page['headmenu']) { ?>
       <div class="iheadmenu">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <?php print render($page['headmenu']); ?>
-            </div>
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
+        <?php print render($page['headmenu']); ?>
+      </div>
     <?php } ?>
 
-    <div class="container">
-      <div class="row">
-
-        <?php if ($page['header']) { ?>
-        <div class="iheader col-md-12">
-          <?php print render($page['header']); ?>
-        </div>
-        <?php } ?>
-
-
-
-      </div><!-- /.row -->
-    </div><!-- /.container -->
   </header><!-- /header -->
+  <div id="header__height"></div>
+<div class="after___head">    <?php if ($page['header']) { ?>
+      <div class="iheader">
+        <?php print render($page['header']); ?>
+      </div>
+    <?php } ?></div>
+
+
 
   <?php if ($page['content_under_head']) { ?>
 
@@ -82,6 +72,20 @@ document.head.appendChild(lazyStyle);
         <div class="row">
           <div class="col-md-12 icontent_under_head">
            <?php print render($page['content_under_head']); ?>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+
+    <section id="section-button" data-type="background" data-speed="10" class="section-bg pages">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 icontent_under_head">
+
+            <div class=telefon>
+              <span class=t-forma><a data-toggle=modal data-target="#myModal" href="#">Заказать звонок</a></span>
+             </div>
+
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
@@ -134,7 +138,22 @@ document.head.appendChild(lazyStyle);
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /section -->
+
+    <section id="section-button" data-type="background" data-speed="10" class="section-bg pages">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 icontent_under_head">
+
+            <div class=telefon>
+              <span class=t-forma><a data-toggle=modal data-target="#myModal" href="#">Заказать звонок</a></span>
+             </div>
+
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
   <?php } ?>
+
 
   <?php if ($page['content_bottom']) { ?>
     <section id="section-5" data-type="background" data-speed="10" class="section-bg pages">
@@ -159,33 +178,27 @@ document.head.appendChild(lazyStyle);
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /section -->
+
+    <section id="section-button" data-type="background" data-speed="10" class="section-bg pages">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 icontent_under_head">
+
+            <div class=telefon>
+              <span class=t-forma><a data-toggle=modal data-target="#myModal" href="#">Заказать звонок</a></span>
+             </div>
+
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+
   <?php } ?>
 
 
 </div><!-- /wrapper -->
 
-  <?php if ($page['footer']) { ?>
-    <footer role="contentinfo" class="ifooter">
-      <div class="container">
-        <div class="row">
-<?php if ($page['headmenu']) { ?>
-          <div class="iheadmenu col-md-12">
 
-                  <?php print render($page['headmenu']); ?>
-
-          </div>
-  <?php } ?>
-          <div class="col-md-12">
-            <?php print render($page['vertical_menu']); ?>
-
-            <?php print render($page['footer']); ?>
-
-          </div>
-
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </footer><!-- /footer -->
-  <?php } ?>
 
 <!-- Mobile Menu -->
         <?php if ($page['headmenu']) { ?>
@@ -229,8 +242,6 @@ document.head.appendChild(lazyStyle);
     </div>
   </div>
 
-
-
   <script type="text/javascript" src="sites/all/themes/goog/js/jquery.mmenu.all.min.js"></script>
   <script type="text/javascript">
   jQuery(document).ready(function($) {
@@ -265,22 +276,27 @@ document.head.appendChild(lazyStyle);
   });
   </script>
 
-  <script type="text/javascript">
-  //BG Paralax Scroll
-    $(document).ready(function(){
-        $('section[data-type="background"]').each(function(){
-            var $bgobj = $(this);
-            $(window).scroll(function() {
-                var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+<script type="text/javascript">
+$headH = $('#header').height() ;
+      //alert($headH );
+    $("#header__height").css("height", $headH + "px");
+</script>
+<!--   <script type="text/javascript">
+//BG Paralax Scroll
+  $(document).ready(function(){
+      $('section[data-type="background"]').each(function(){
+          var $bgobj = $(this);
+          $(window).scroll(function() {
+              var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
 
-                //var coords = 'center '+ yPos + 'px';
-                var coords = 'center';
+              //var coords = 'center '+ yPos + 'px';
+              var coords = 'center';
 
-                $bgobj.css({ backgroundPosition: coords });
-            });
-        });
-    });
-  </script>
+              $bgobj.css({ backgroundPosition: coords });
+          });
+      });
+  });
+</script> -->
 
 
 <!--     <script>
