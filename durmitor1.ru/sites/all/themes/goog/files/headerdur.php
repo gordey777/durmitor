@@ -59,15 +59,13 @@
 
     <div class="col-md-12 hidden-xs hidden-sm">
       <div class="col-md-6">
-
-          <span class=slog1>Черногория <br> Виза не нужна</span>
-
-      </div>
-      <div class="col-md-6">
-
           <span class=slog2>Высшая точка 2522 м <br> Расположен на высоте 1570 м</span>
-
       </div>
+
+      <div class="col-md-6">
+          <span class=slog1>Черногория <br> Виза не нужна</span>
+      </div>
+
     </div>
 </div>
 
