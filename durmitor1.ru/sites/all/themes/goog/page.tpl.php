@@ -3,9 +3,11 @@
 
 <head>
   <?php print $head ?>
-    <title>
-      <?php print $title ?>
-    </title>
+
+  <title>
+    <?php print $title ?>
+  </title>
+
 <!--     <script>
 if (window.XMLHttpRequest) {
   xhr = new XMLHttpRequest();
@@ -37,10 +39,9 @@ document.head.appendChild(lazyStyle);
 
 <body>
 
-
-
 <!-- wrapper -->
 <div class="wrapper">
+
   <header id="header" role="banner">
 
 <!-- Humburger button -->
@@ -54,14 +55,18 @@ document.head.appendChild(lazyStyle);
       </div>
     <?php } ?>
 
-  </header><!-- /header -->
-  <div id="header__height"></div>
-<div class="after___head">    <?php if ($page['header']) { ?>
-      <div class="iheader">
-        <?php print render($page['header']); ?>
-      </div>
-    <?php } ?></div>
+  </header>
 
+  <div id="header__height"></div>
+
+  <div class="after___head"><!-- head margin block -->
+
+  <?php if ($page['header']) { ?>
+    <div class="iheader">
+      <?php print render($page['header']); ?>
+    </div>
+  <?php } ?></div>
+<!-- /header -->
 
 
   <?php if ($page['content_under_head']) { ?>
@@ -198,14 +203,15 @@ document.head.appendChild(lazyStyle);
 </div><!-- /wrapper -->
 
 <!-- Mobile Menu -->
-        <?php if ($page['headmenu']) { ?>
-          <nav id="mob-menu-wrap">
-            <?php print render($page['headmenu']); ?>
-          </nav><!-- #mob-menu -->
+  <?php if ($page['headmenu']) { ?>
+    <nav id="mob-menu-wrap">
+      <?php print render($page['headmenu']); ?>
+    </nav><!-- #mob-menu -->
 
-        <?php } ?>
+  <?php } ?>
 
   <div id=modal0_fon></div>
+
   <div id=modal0_content>
     <div id=x onclick="hide_modal0();"></div>
     <div class="modal fade" id=myModal tabindex=-1 role=dialog aria-labelledby=myModalLabel aria-hidden=true>
@@ -239,6 +245,7 @@ document.head.appendChild(lazyStyle);
     </div>
   </div>
 
+ <!-- MOB MENU PLUGIN -->
   <script type="text/javascript" src="sites/all/themes/goog/js/jquery.mmenu.all.min.js"></script>
   <script type="text/javascript">
   jQuery(document).ready(function($) {
@@ -265,6 +272,8 @@ document.head.appendChild(lazyStyle);
       $("#header__height").css("height", $headH + "px");
   </script>
 
+
+<!-- THEMS SCRIPTS -->
   <script>
     document.getElementById('exampleInputEmail8').onkeypress = document.getElementById('exampleInputEmail2').onkeypress = document.getElementById('exampleInputEmail5').onkeypress = function(e) {
       e = e || event;
