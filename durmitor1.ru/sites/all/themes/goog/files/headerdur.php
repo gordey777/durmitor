@@ -23,7 +23,7 @@
 
     <div class="col-md-9">
 
-      <div class="col-md-4 hidden-xs hidden-sm">
+      <div class="col-md-3 hidden-xs hidden-sm">
         <div class="header-email">
           <span>
             <script>var login='info';var server='durmitor1.ru';var email=login+'@'+server;var url='mailto:'+email;document.write('<a href="'+url+'">'+email+'</a>');</script>
@@ -34,13 +34,13 @@
 
 
 
-        <div class="col-sm-6 col-xs-6 col-md-4">
+        <div class="col-sm-6 col-xs-6 col-md-5">
           <div class="phone-ch">
 
             <span>
               <a href="tel:+38263460568">+382 63-460-568</a>
             </span>
-            <span class="">Черногория</span><!--<span class=vber>Viber</span>-->
+            <span class="tel__title">Черногория</span><!--<span class=vber>Viber</span>-->
           </div>
         </div>
 
@@ -50,7 +50,7 @@
           <span>
             <a href="tel:+84995019912">8 (499) 501-99-12</a>
           </span>
-          <span class="">Россия</span>
+          <span class="tel__title">Россия</span>
 
         </div>
         </div>
@@ -59,14 +59,14 @@
 
     <div class="col-md-12 hidden-xs hidden-sm">
       <div class="col-md-6">
-        <div class="">
+
           <span class=slog1>Черногория <br> Виза не нужна</span>
-        </div>
+
       </div>
       <div class="col-md-6">
-        <div class="">
-          <span class=slog2_1>Высшая точка 2522 м <br> Расположен на высоте 1570 м</span>
-        </div>
+
+          <span class=slog2>Высшая точка 2522 м <br> Расположен на высоте 1570 м</span>
+
       </div>
     </div>
 </div>

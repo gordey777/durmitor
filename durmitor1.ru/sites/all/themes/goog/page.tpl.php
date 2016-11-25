@@ -197,8 +197,6 @@ document.head.appendChild(lazyStyle);
 
 </div><!-- /wrapper -->
 
-
-
 <!-- Mobile Menu -->
         <?php if ($page['headmenu']) { ?>
           <nav id="mob-menu-wrap">
@@ -211,15 +209,15 @@ document.head.appendChild(lazyStyle);
   <div id=modal0_content>
     <div id=x onclick="hide_modal0();"></div>
     <div class="modal fade" id=myModal tabindex=-1 role=dialog aria-labelledby=myModalLabel aria-hidden=true>
-      <div class=modal-dialog>
+      <div class="modal-dialog">
         <div class=modal-content id=modal-content>
           <div class=modal-header>
             <button type=button class=close data-dismiss=modal id=but_close aria-hidden=true>&times;</button>
-            <h4 class=modal-title id=myModalLabel>Мы Вам перезвоним</h4>
+            <h4 class="modal-title" id="myModalLabel">Мы Вам перезвоним</h4>
           </div>
           <div class=modal-body>
             <form role=form name=form_1 onsubmit="return false;">
-              <div class=form-group>
+              <div class="form-group">
                 <label for=exampleInputEmail7>Имя</label>
                 <div class=input-group> <span class=input-group-addon><span class="glyphicon glyphicon-user"></span></span>
                   <input class=form-control id=exampleInputEmail7 placeholder="Имя" name=fio>

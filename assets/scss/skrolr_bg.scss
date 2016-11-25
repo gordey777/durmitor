@@ -5,10 +5,11 @@ header {
 
   width: 100%;
   //padding-bottom: 5%;
-  //background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.6)), url(../img/head-bg.jpg) center 120% no-repeat fixed;
+  //background: linear-gradient(to bottom, rgba(0,0,255,.8), rgba(255,255,255,.3)), #fff;
+  //, url(../img/head-bg.jpg) center 120% no-repeat fixed;
   //background-size: cover;
 
-  background: #fff;
+  background: rgba(255,255,255,.8);
 }
 #section-button {
   padding-top: 10vh;

@@ -70,15 +70,23 @@ $color-black: #fff;
 $color-text: #fff;
 //$bg-list: #f9f9f9;
 $bg-list: transparent;
-$color-menu: #444;
-//$color-menu: #fff;
-//
+//$color-menu: #444;
+$color-menu: #fff;
+$menu-shad: #444;
+
+
 .content {
   img {
     margin-bottom: 20px;
   }
   ul {
     padding-left: 30px;
+  }
+  h3 {
+    font-size: 25px;
+
+    margin-bottom: 20px;
+    padding-top: 10px;
   }
 }
 
@@ -97,8 +105,7 @@ ul.menu {
 
 html,
 body {
-  font-family: 'open sans', arial, sans-serif;
-
+  //font-family: 'open sans', arial, sans-serif;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -130,15 +137,23 @@ table {
     display: inline-block;
 
     min-width: 700px;
+    th {
+      padding: 5px 0 5px 5px;
+
+      vertical-align: middle;
+    }
+    //tr,
+    td {
+      padding: 5px 0 5px 5px;
+
+      vertical-align: middle;
+
+      border: 1px solid #ececec;
+    }
   }
 }
 
-tr,
-td {
-  vertical-align: middle;
 
-  border: 1px solid #ececec;
-}
 
 .navbar-collapse.collapse {
   -webkit-transition: .5s;
@@ -301,8 +316,9 @@ td {
         //background: rgba(255, 255, 255, .8);
       }
       h3 {
-        font-family: 'open sans bold', arial, sans-serif;
+        //font-family: 'open sans bold', arial, sans-serif;
         font-size: 24px;
+        font-weight: 700;
 
         position: relative;
         z-index: 9;
@@ -368,9 +384,9 @@ td {
       float: left;
       > {
         h1 {
-          font-family: 'product sans', 'open sans', arial, sans-serif;
+          //font-family: 'product sans', 'open sans', arial, sans-serif;
           font-size: 26px;
-          font-weight: bold;
+          font-weight: 700;
 
           margin: 0;
           margin-top: 5px;
@@ -404,7 +420,7 @@ td {
 .telefon .t-forma a {
   //font-family: arial, sans-serif;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: .54;
 
   display: inline-block;
@@ -432,33 +448,47 @@ td {
 
   text-align: center;
 
-  color: #000;
+  color: $color-menu;
+  text-shadow: -1px -1px 0 $menu-shad,
+  1px -1px 0 $menu-shad,
+  -1px 1px 0 $menu-shad,
+  1px 1px 0 $menu-shad;
+  .header-email,
   .phone-ch,
   .phone-moscov {
     display: inline-block;
 
     margin: 0 -15px;
     span {
+      font-size: 20px;
+
       display: inline-block;
 
-      padding: 0 20px 10px 0;
+      padding: 0 0 10px 0;
+    }
+    .tel__title {
+      font-size: 16px;
+
+      padding: 0 0 10px 20px;
     }
     a {
       font-weight: 800;
 
-      color: #000;
+      color: $color-menu;
     }
   }
   .brand {
     a {
-      color: #000;
+      color: $color-menu;
     }
     h1 {
-      font-size: 35px;
+      font-size: 40px;
       font-weight: 800;
 
       margin: 0;
       padding: 0 0 15px 0;
+
+      text-transform: uppercase;
     }
     span {
       font-size: 22px;
@@ -467,11 +497,11 @@ td {
   .brand-mob {
     padding-bottom: 15px;
     a {
-      color: #000;
+      color: $color-menu;
     }
     h1 {
       font-size: 30px;
-      font-weight: bold;
+      font-weight: 700;
 
       margin: 0;
       padding: 0;
@@ -487,8 +517,18 @@ td {
     a {
       font-weight: 700;
 
-      color: #000;
+      color: $color-menu;
     }
+  }
+  .slog1,
+  .slog2 {
+    line-height: 1.3;
+
+    display: inline-block;
+
+    padding: 0;
+
+    text-align: center;
   }
   ul {
     display: -webkit-flex;
@@ -550,9 +590,9 @@ td {
       float: left;
       > {
         h1 {
-          font-family: 'product sans', 'open sans', arial, sans-serif;
+          //font-family: 'product sans', 'open sans', arial, sans-serif;
           font-size: 26px;
-          font-weight: bold;
+          font-weight: 700;
 
           margin: 0;
           margin-top: 5px;
@@ -581,9 +621,9 @@ td {
     &:nth-child(2) > {
       a {
         > h1 {
-          font-family: 'product sans', 'open sans', arial, sans-serif;
+          //font-family: 'product sans', 'open sans', arial, sans-serif;
           font-size: 22px;
-          font-weight: bold;
+          font-weight: 700;
 
           margin: 0;
           margin-top: 5px;
@@ -601,7 +641,7 @@ td {
         }
         &:hover > h1,
         &:visited > h1 {
-          font-family: 'product sans', 'open sans', arial, sans-serif;
+          //font-family: 'product sans', 'open sans', arial, sans-serif;
           font-size: 22px;
           font-weight: bold;
 
@@ -619,7 +659,7 @@ td {
         }
       }
       span {
-        font-family: 'product sans', 'open sans', arial, sans-serif;
+        //font-family: 'product sans', 'open sans', arial, sans-serif;
         font-size: 19px;
 
         white-space: nowrap;
@@ -634,7 +674,7 @@ td {
         > span,
         &:hover > span,
         &:visited > span {
-          font-family: 'product sans', 'open sans', arial, sans-serif;
+          //font-family: 'product sans', 'open sans', arial, sans-serif;
           font-size: 16px;
 
           white-space: nowrap;
@@ -862,8 +902,9 @@ td {
     width: 190px;
     > span {
       &:first-child {
-        font-family: 'open sans bold', arial, sans-serif;
+        //font-family: 'open sans bold', arial, sans-serif;
         font-size: 20px;
+        font-weight: 700;
 
         display: block;
 
@@ -909,8 +950,9 @@ td {
     width: 190px;
     > span {
       &:first-child {
-        font-family: 'open sans bold', arial, sans-serif;
+        //font-family: 'open sans bold', arial, sans-serif;
         font-size: 20px;
+        font-weight: 700;
 
         display: block;
 
@@ -957,8 +999,8 @@ td {
     display:         flex;
 
     width: 100%;
-    margin: 0;
-    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    padding: 0;
 
     text-align: center;
 
@@ -968,8 +1010,9 @@ td {
     > li {
       display: inline-block;
 
-      width: 18%;
-      margin: auto;
+      width: 17%;
+      margin: 0 auto 10px auto;
+      padding: 0;
 
       list-style-type: none;
       list-style-image: none;
@@ -977,21 +1020,24 @@ td {
       text-align: center;
       white-space: nowrap;
       > a {
-        font-size: 18px;
-        //display: inline-block;
-        //float: left;
+        font-size: 16px;
         font-weight: 800;
-        //box-sizing: border-box;
 
+        display: inline-block;
+
+        box-sizing: border-box;
+        width: 100%;
         width: auto;
-        //line-height: 55px;
-        padding: 5px 0;
+        margin: 0;
+        padding: 5px;
 
         text-align: center;
-        //height: 55px;
-        //padding: 0 10px 0 10px !important;
 
         color: $color-menu;
+        text-shadow: -1px -1px 0 $menu-shad,
+        1px -1px 0 $menu-shad,
+        -1px 1px 0 $menu-shad,
+        1px 1px 0 $menu-shad;
         &:focus,
         &:hover,
         &:active {
@@ -1103,7 +1149,7 @@ width: 940px;
 margin: 0 30px 50px 30px;
 padding: 0; */
   h1 {
-    font-family: 'open sans light', arial, sans-serif;
+    //font-family: 'open sans light', arial, sans-serif;
     font-size: 40px;
 
     width: 100%;
@@ -1122,8 +1168,9 @@ padding: 0; */
     text-align: center;
   }
   h3 {
-    font-family: 'open sans bold', arial, sans-serif !important;
+    //font-family: 'open sans bold', arial, sans-serif !important;
     font-size: 30px !important;
+    font-weight: 700;
 
     width: 100% !important;
     margin-top: -15px !important;
@@ -1194,7 +1241,7 @@ padding: 0; */
 }
 
 .btn-danger {
-  font-family: arial, sans-serif !important;
+  //font-family: arial, sans-serif !important;
   font-size: 17px;
   font-weight: bold !important;
   line-height: 1.54 !important;
@@ -1294,7 +1341,7 @@ padding: 0; */
 }
 .icontent_middle .region-content-middle .content > {
   h1 {
-    font-family: 'open sans light', arial, sans-serif;
+    //font-family: 'open sans light', arial, sans-serif;
     font-size: 36px;
 
     width: auto;
@@ -1346,8 +1393,9 @@ padding: 0; */
           margin: 0 0 25px 0;
           padding: 0;
           &.text_right {
-            font-family: 'open sans bold', arial, sans-serif;
+            //font-family: 'open sans bold', arial, sans-serif;
             font-size: 20px;
+            font-weight: 700;
 
             clear: both;
 
@@ -1363,7 +1411,7 @@ padding: 0; */
 }
 .icontent_before_bottom .region-content-before-bottom .content > {
   h1 {
-    font-family: 'open sans light', arial, sans-serif;
+    //font-family: 'open sans light', arial, sans-serif;
     font-size: 36px;
 
     width: auto;
@@ -1414,8 +1462,9 @@ padding: 0; */
           margin: 0 0 0 0;
           padding: 0;
           &.sbold {
-            font-family: 'open sans bold', arial, sans-serif;
+            //font-family: 'open sans bold', arial, sans-serif;
             font-size: 20px;
+            font-weight: 700;
 
             margin: 0 0 0 0;
             padding: 0;
@@ -1536,7 +1585,8 @@ padding: 0; */
 
 
 td > h2 {
-  font-family: 'open sans semibold', arial, sans-serif;
+  //font-family: 'open sans semibold', arial, sans-serif;
+  font-weight: 700;
 
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1609,11 +1659,11 @@ div#block-block-15 {
 }
 
 .bigLi li {
-  font-family: 'open sans', arial, sans-serif !important;
+  //font-family: 'open sans', arial, sans-serif !important;
   font-size: 20px !important;
   line-height: 28px !important;
+  //width: 580px;
 
-  width: 580px;
   margin: 0 auto 0 auto !important;
 
   list-style-type: disc !important;
@@ -1628,7 +1678,7 @@ div#block-block-15 {
 }
 
 .first {
-  padding-left: 2px !important;
+  //padding-left: 2px !important;
 }
 
 .leaf {
@@ -1661,15 +1711,16 @@ div#block-block-15 {
         border: 1px solid #ddd;
         background-color: $bg-list;
         > p.sbold {
-          font-family: 'open sans bold', arial, sans-serif;
+          //font-family: 'open sans bold', arial, sans-serif;
           font-size: 20px;
+          font-weight: 700;
 
           margin: 0 0 0 0;
           padding: 0;
         }
       }
       h1 {
-        font-family: 'open sans light', arial, sans-serif;
+        //font-family: 'open sans light', arial, sans-serif;
         font-size: 36px;
 
         width: auto;
@@ -1715,6 +1766,10 @@ p.text_right {
     z-index: 999999;
 
     margin: 0 auto;
+    padding-top: 10vh;
+    .modal-title {
+      color: $color-menu;
+    }
   }
 }
 
