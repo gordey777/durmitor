@@ -1,4 +1,5 @@
 <?php ?>
+
 <div class="container header-cont">
   <div class="row">
 
@@ -31,53 +32,44 @@
         </div>
       </div>
 
-
-
-
-        <div class="col-sm-6 col-xs-6 col-md-5">
-          <div class="phone-ch">
-
-            <span>
-              <a href="tel:+38263460568">+382 63-460-568</a>
-            </span>
-            <span class="tel__title">Черногория</span><!--<span class=vber>Viber</span>-->
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-xs-6 col-md-4">
-          <div class="phone-moscov">
+      <div class="col-sm-6 col-xs-6 col-md-5">
+        <div class="phone-ch">
 
           <span>
-            <a href="tel:+84995019912">8 (499) 501-99-12</a>
+            <a href="tel:+38263460568">+382 63-460-568</a>
           </span>
-          <span class="tel__title">Россия</span>
-
+          <span class="tel__title">Черногория</span><!--<span class=vber>Viber</span>-->
         </div>
-        </div>
-
-
-
-    <div class="col-md-12 hidden-xs hidden-sm">
-      <div class="col-md-6">
-          <span class=slog2>Высшая точка 2522 м <br> Расположен на высоте 1570 м</span>
       </div>
 
-      <div class="col-md-6">
-          <span class=slog1>Черногория <br> Виза не нужна</span>
+      <div class="col-sm-6 col-xs-6 col-md-4">
+        <div class="phone-moscov">
+
+        <span>
+          <a href="tel:+84995019912">8 (499) 501-99-12</a>
+        </span>
+        <span class="tel__title">Россия</span>
+
+        </div>
+      </div>
+
+      <div class="col-md-12 hidden-xs hidden-sm">
+        <div class="col-md-6">
+            <span class=slog2>Высшая точка 2522 м <br> Расположен на высоте 1570 м</span>
+        </div>
+
+        <div class="col-md-6">
+            <span class=slog1>Черногория <br> Виза не нужна</span>
+        </div>
       </div>
 
     </div>
-</div>
-
-
 
   </div><!-- /.row -->
 </div><!-- /.container -->
 
-
 <!--   <div>
   <span><a href="/"><img src="http://durmitor1.ru/sites/all/themes/goog/images/logo_dur.jpg" /></a></span>
 </div> -->
-
 
 <?php ?>
