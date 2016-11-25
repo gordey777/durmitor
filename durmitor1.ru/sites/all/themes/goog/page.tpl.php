@@ -18,8 +18,8 @@ var lazyStyle = document.createElement('style');
 lazyStyle.innerHTML = xhr.responseText;
 document.head.appendChild(lazyStyle);
 </script> -->
-  <?php print $styles ?>
 
+  <?php print $styles ?>
 
   <link href="sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
@@ -255,70 +255,39 @@ document.head.appendChild(lazyStyle);
       navbar: {
         title: 'Дурмитор'
       },
-      "navbars": [
 
-        {
-          "position": "bottom",
-          "content": [
-
-            "<a class='fa fa-skype' href='skype:'></a>",
-            "<a class='fa fa-vk' href='http://vkontakte.ru'></a>",
-            "<a class='fa fa-instagram' href='https://www.instagram.com/'></a>",
-            "<a class='fa fa-facebook' href='https://www.facebook.com/'></a>"
-          ]
-        }
-      ]
     });
 
   });
   </script>
+  <script type="text/javascript">
+    $headH = $('#header').height() ;
+      $("#header__height").css("height", $headH + "px");
+  </script>
 
-<script type="text/javascript">
-$headH = $('#header').height() ;
-      //alert($headH );
-    $("#header__height").css("height", $headH + "px");
-</script>
-<!--   <script type="text/javascript">
-//BG Paralax Scroll
-  $(document).ready(function(){
-      $('section[data-type="background"]').each(function(){
-          var $bgobj = $(this);
-          $(window).scroll(function() {
-              var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+  <script>
+    document.getElementById('exampleInputEmail8').onkeypress = document.getElementById('exampleInputEmail2').onkeypress = document.getElementById('exampleInputEmail5').onkeypress = function(e) {
+      e = e || event;
+      if (e.ctrlKey || e.altKey || e.metaKey) return;
+      var chr = getChar(e);
+      if (chr == null) return;
+      if (chr < '0' || chr > '9') {
+        return false;
+      }
+    }
 
-              //var coords = 'center '+ yPos + 'px';
-              var coords = 'center';
-
-              $bgobj.css({ backgroundPosition: coords });
-          });
-      });
-  });
-</script> -->
-
-
-<!--     <script>
-document.getElementById('exampleInputEmail8').onkeypress = document.getElementById('exampleInputEmail2').onkeypress = document.getElementById('exampleInputEmail5').onkeypress = function(e) {
-  e = e || event;
-  if (e.ctrlKey || e.altKey || e.metaKey) return;
-  var chr = getChar(e);
-  if (chr == null) return;
-  if (chr < '0' || chr > '9') {
-    return false;
-  }
-}
-
-function getChar(event) {
-  if (event.which == null) {
-    if (event.keyCode < 32) return null;
-    return String.fromCharCode(event.keyCode)
-  }
-  if (event.which != 0 && event.charCode != 0) {
-    if (event.which < 32) return null;
-    return String.fromCharCode(event.which)
-  }
-  return null;
-}
-</script> -->
+    function getChar(event) {
+      if (event.which == null) {
+        if (event.keyCode < 32) return null;
+        return String.fromCharCode(event.keyCode)
+      }
+      if (event.which != 0 && event.charCode != 0) {
+        if (event.which < 32) return null;
+        return String.fromCharCode(event.which)
+      }
+      return null;
+    }
+  </script>
       <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
   (function(d, w, c) {
@@ -357,6 +326,7 @@ function getChar(event) {
       <img src="https://mc.yandex.ru/watch/36871855" style="position:absolute; left:-9999px;" alt="" />
     </div>
   </noscript>
+
       <!-- /Yandex.Metrika counter -->
       <!-- Код тега ремаркетинга Google -->
       <!--------------------------------------------------

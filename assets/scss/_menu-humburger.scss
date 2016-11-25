@@ -5,14 +5,14 @@
 
 // vars
 
-$button-width: 44px;
-$button-height: 39px;
+$button-width: 48px;
+$button-height: 42px;
 $bar-thickness: 3px;
 $button-pad: 10px;
 $button-trans-delay: .8s;
-$humb-color: rgb(155,155,155);
+$humb-color: rgb(255,255,255);
 $humb-color-hov: darken($humb-color, 20%);
-$humb-bg-color: rgba(255,150,80, 1);
+$humb-bg-color: rgba(80,150,255, 1);
 /**
  * Toggle Switch Globals
  *
