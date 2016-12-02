@@ -24,7 +24,7 @@ $humb-bg-color: rgba(80,150,255, 1);
 .humb-toggle-switch {
   font-size: 0;
 
-  position: absolute;
+  position: fixed;
   z-index: 99;
   top: 30px;
   right: 20px;

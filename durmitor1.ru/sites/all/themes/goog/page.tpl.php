@@ -48,24 +48,25 @@ document.head.appendChild(lazyStyle);
     <a href="#mob-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
       <span>toggle menu</span>
     </a>
+    <div class="after___head">
+      <?php if ($page['header']) { ?>
+        <div class="iheader">
+          <?php print render($page['header']); ?>
+        </div>
+      <?php } ?>
+    </div>
 
     <?php if ($page['headmenu']) { ?>
-      <div class="iheadmenu">
+      <div id="main__menu" class="iheadmenu">
         <?php print render($page['headmenu']); ?>
       </div>
     <?php } ?>
 
   </header>
 
-  <div id="header__height"></div>
+  <!-- <div id="header__height"></div>head margin block -->
 
-  <div class="after___head"><!-- head margin block -->
 
-  <?php if ($page['header']) { ?>
-    <div class="iheader">
-      <?php print render($page['header']); ?>
-    </div>
-  <?php } ?></div>
 <!-- /header -->
 
 
@@ -244,6 +245,21 @@ document.head.appendChild(lazyStyle);
       </div>
     </div>
   </div>
+    <!--  MAIN NAV -->
+  <script>
+      $(document).ready(function(){
+          $(window).scroll(function(){
+              if ($(window).scrollTop()>$("#header").height()-$("#main__menu").height()){
+                  $("#main__menu").addClass("stickly");
+              }
+              else
+              {
+  //если не достигли указанной высоты или когда проскролили вверх страницы удаляем класс
+                  $("#main__menu").removeClass("stickly");
+              }
+          });
+      });
+  </script>
 
  <!-- MOB MENU PLUGIN -->
   <script type="text/javascript" src="sites/all/themes/goog/js/jquery.mmenu.all.min.js"></script>
