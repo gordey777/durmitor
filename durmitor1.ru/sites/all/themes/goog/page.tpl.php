@@ -25,8 +25,8 @@ document.head.appendChild(lazyStyle);
 
   <link href="sites/all/themes/goog/styles/bootstrap.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/styles/bootstrap-theme.min.css" rel=stylesheet type="text/css">
-  <link href="sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
   <link href="sites/all/themes/goog/css/skrolr_bg.css" rel=stylesheet type="text/css">
+  <link href="sites/all/themes/goog/css/styles.css" rel=stylesheet type="text/css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -48,6 +48,7 @@ document.head.appendChild(lazyStyle);
     <a href="#mob-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
       <span>toggle menu</span>
     </a>
+
     <div class="after___head">
       <?php if ($page['header']) { ?>
         <div class="iheader">
@@ -66,35 +67,13 @@ document.head.appendChild(lazyStyle);
 
   <!-- <div id="header__height"></div>head margin block -->
 
-
 <!-- /header -->
 
 
   <?php if ($page['content_under_head']) { ?>
-
-    <section id="section-1" data-type="background" data-speed="10" class="section-bg pages">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 icontent_under_head">
-           <?php print render($page['content_under_head']); ?>
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /section -->
-
-    <section id="section-button" data-type="background" data-speed="10" class="section-bg pages">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 icontent_under_head">
-
-            <div class=telefon>
-              <span class=t-forma><a data-toggle=modal data-target="#myModal" href="#">Заказать звонок</a></span>
-             </div>
-
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /section -->
+    <div class="icontent_under_head">
+     <?php print render($page['content_under_head']); ?>
+    </div>
   <?php } ?>
 
   <?php if ($page['content_top']) { ?>
@@ -143,20 +122,6 @@ document.head.appendChild(lazyStyle);
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /section -->
-
-    <section id="section-button" data-type="background" data-speed="10" class="section-bg pages">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 icontent_under_head">
-
-            <div class=telefon>
-              <span class=t-forma><a data-toggle=modal data-target="#myModal" href="#">Заказать звонок</a></span>
-             </div>
-
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /section -->
   <?php } ?>
 
 
@@ -174,7 +139,7 @@ document.head.appendChild(lazyStyle);
 
 
   <?php if ($page['content']) { ?>
-    <section id="section-6" data-type="background" data-speed="10" class="section-bg pages">
+    <section id="section-10" data-type="background" data-speed="10" class="section-bg pages not-front">
       <div class="container">
         <div class="row">
           <div class="icontent col-md-12">
@@ -183,21 +148,13 @@ document.head.appendChild(lazyStyle);
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /section -->
+  <?php } ?>
 
-    <section id="section-button" data-type="background" data-speed="10" class="section-bg pages">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 icontent_under_head">
 
-            <div class=telefon>
-              <span class=t-forma><a data-toggle=modal data-target="#myModal" href="#">Заказать звонок</a></span>
-             </div>
-
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /section -->
-
+  <?php if ($page['footer']) { ?>
+    <footer>
+      <?php print render($page['footer']); ?>
+    </footer>
   <?php } ?>
 
 
@@ -357,13 +314,15 @@ document.head.appendChild(lazyStyle);
       <!--------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
 ------------------------------------------------- -->
-  <script type="text/javascript">
-  /* <![CDATA[ */
-  var google_conversion_id = 870985023;
-  var google_custom_params = window.google_tag_params;
-  var google_remarketing_only = true;
-  /* ]]> */
-  </script>
+  <div style="display:none">
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 870985023;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+  </div>
   <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
   </script>
   <noscript>
@@ -371,6 +330,7 @@ document.head.appendChild(lazyStyle);
       <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/870985023/?guid=ON&amp;script=0" />
     </div>
   </noscript>
+
 
 </body>
 
