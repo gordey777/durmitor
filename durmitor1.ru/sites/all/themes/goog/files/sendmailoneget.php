@@ -1,5 +1,5 @@
 <?php
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){
+if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['mail'])&&$_POST['mail']!="")){
 $email = "info@durmitor1.ru"; //Здесь прописать свой e-mail
 $subject = 'Заказ! с Durmitor1.ru.';
 $Path=$_SERVER['HTTP_REFERER'];
@@ -11,10 +11,10 @@ $message = '
             <body>
 				<p>Форма: <b>Консультация психолога</b></p>
 
+                <p>Имя: '.$_POST['name'].'</p>
 
-                <p>Email: '.$_POST['name'].'</p>
+                <p>Email: '.$_POST['mail'].'</p>
 
-                <p>Сообщение: '.$_POST['phone'].'</p>
             </body>
         </html>' . $Path;
 

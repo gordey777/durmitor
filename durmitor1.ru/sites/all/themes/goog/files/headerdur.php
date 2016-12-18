@@ -3,36 +3,12 @@
   <div class="row">
     <ul class="header__content">
 
-      <li class="brand">
-        <a href="/">
-          <h1><span class="bg-text-wrap">Дурмитор</span></h1>
-          <h2><span class="bg-text-wrap">Спортивный санаторий</span></h2>
-        </a>
+      <li class="brand-head">
+        <span class="brand-slog bg-text-wrap">Спортивный санаторий <a href="/"><b>Дурмитор</b></a> - возвращаем людям здоровье.</span>
       </li>
 
-      <li class="slogs1 hidden-xs hidden-sm hidden-md">
-        <span class="slog1 bg-text-wrap">Черногория</span>
-        <span class="slog2 bg-text-wrap">Виза не нужна</span>
-      </li>
-      <li class="slogs2  hidden-xs hidden-sm hidden-md">
-        <span class="slog2_1 bg-text-wrap">Высшая точка 2522 м</span>
-        <span class="slog2_2 bg-text-wrap">Расположен на высоте 1570 м</span>
-      </li>
-
-      <li class="phone-moscov">
-        <span class="bg-text-wrap">+382 63-460-568</span>
-        <span class="hidden-xs bg-text-wrap">Черногория</span><!--<span class=vber>Viber</span>-->
-      </li>
-
-      <li class="phone-moscov">
-        <span class="bg-text-wrap">8 (499) 501-99-12</span>
-        <span class="hidden-xs bg-text-wrap">Россия</span>
-      </li>
-
-      <li class="header-email">
-        <span class="bg-text-wrap">
-          <script>var login='info';var server='durmitor1.ru';var email=login+'@'+server;var url='mailto:'+email;document.write('<a href="'+url+'">'+email+'</a>');</script>
-        </span>
+      <li class="brand-head">
+        <span class="brand-slog bg-text-wrap">Расположен в горах Черногории (виза не нужна).</span>
       </li>
 
       <li class="phone">

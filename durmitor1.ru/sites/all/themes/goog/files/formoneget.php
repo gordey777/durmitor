@@ -14,7 +14,7 @@
 						    if ($(this).val() == '')
 						    {
 						        $(this).addClass('error_form');
-						        $('#formquestone button.submitbutton').text('Позвоните мне!');
+						        $('#formquestone button.submitbutton').text('Получить!');
 						        send_true = 0;
 						    }
 						    if ($(this).val() != '')
@@ -41,7 +41,7 @@
 							        $('#formquestone')[0].reset();
 							        $('#formquestone .form-control').removeClass('error_form');
 						   } else {
-						   		$('#formquestone button.submitbutton').text('Позвоните мне!');
+						   		$('#formquestone button.submitbutton').text('Получить!');
 						   }
 					    }
 
@@ -57,9 +57,8 @@
 					</div>
 					<div class="form-group">
 						<div class="input-group">
-							<span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
-							<input class="form-control" placeholder="Введите ваш телефон" name="phone"></input>
-
+							<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+							<input class="form-control" placeholder="Введите e-mail" name="mail" />
 						</div>
 					</div>
 

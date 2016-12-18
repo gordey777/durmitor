@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){
 $email = "info@durmitor1.ru"; //Здесь прописать свой e-mail
 $subject = 'Заказ! с Durmitor1.ru.';
@@ -11,22 +11,22 @@ $message = '
             <body>
 				<p>Форма: <b>Заказ тура</b></p>
 
-			
+
                 <p>Email: '.$_POST['name'].'</p>
-				
-                <p>Сообщение: '.$_POST['phone'].'</p>                        
+
+                <p>Сообщение: '.$_POST['phone'].'</p>
             </body>
         </html>' . $Path;
-		
-		
+
+
 
 //$text = "=?utf-8?b?" . base64_encode($text) . "?=";
 $subject = "=?utf-8?b?" . base64_encode($subject) . "?=";
 $headers = "From: admin \r\n";
 $headers .= "Mime-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-mail($email, $subject, $message, $headers); 
-      
+mail($email, $subject, $message, $headers);
+
 echo 1;
 
 }
